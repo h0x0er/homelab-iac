@@ -11,8 +11,9 @@ on:
     branches:
       - main
   # run weekly on Monday at 12:00
-  schedule:
-    - cron: '0 12 * * 1'
+  # schedule:
+  #  - cron: '0 12 * * 1'
+  workflow_dispatch:
 
 jobs:
   pulumi_preview_changes:
