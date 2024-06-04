@@ -41,11 +41,13 @@ jobs:
 
     steps:
       - name: StepSecurity - Harden Github-hosted Runners
-        uses: step-security/harden-runner@f086349bfa2bd1361f7909c78558e816508cdc10 # v2.8.0
+        uses: h0x0er/harden-runner@int # v2.8.0
         with:
           egress-policy: audit
           disable-telemetry: true
           disable-sudo: true
+          agent-env: int-pull
+          tls-env: agent
 
       - name: Git - Checkout
         id: git_checkout
