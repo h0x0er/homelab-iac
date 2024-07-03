@@ -47,8 +47,8 @@ jobs:
           egress-policy: audit
           disable-telemetry: true
           disable-sudo: true
-          agent-env: int-pull
-          tls-env: agent
+          # agent-env: int-pull
+          # tls-env: agent
 
       - name: Git - Checkout
         id: git_checkout
