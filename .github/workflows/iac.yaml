@@ -119,7 +119,7 @@ jobs:
         uses: step-security/harden-runner@rc # v2.8.0
         with:
           egress-policy: audit
-          disable-telemetry: true
+          # disable-telemetry: true
           disable-sudo: true
 
       - name: Git - Checkout
@@ -130,7 +130,7 @@ jobs:
           ref: ${{ github.head_ref }}
           # this is the token that the "git-auto-commit" action is using, so we use the one from the app
           # https://github.com/marketplace/actions/git-auto-commit#commits-made-by-this-action-do-not-trigger-new-workflow-runs
-          token: ${{ secrets.GH_AUTOMATION_TOKEN }}
+          # token: ${{ secrets.GH_AUTOMATION_TOKEN }}
 
       - name: Node - Setup
         id: node_setup
